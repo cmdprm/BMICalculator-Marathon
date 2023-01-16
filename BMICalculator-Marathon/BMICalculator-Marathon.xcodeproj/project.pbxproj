@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CE6458A72974B47B00DBDDE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6458A62974B47B00DBDDE8 /* AppDelegate.swift */; };
-		CE6458AB2974B47B00DBDDE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6458AA2974B47B00DBDDE8 /* ViewController.swift */; };
+		CE6458AB2974B47B00DBDDE8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6458AA2974B47B00DBDDE8 /* MainViewController.swift */; };
 		CE6458B02974B47D00DBDDE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6458AF2974B47D00DBDDE8 /* Assets.xcassets */; };
 		CE6458B32974B47D00DBDDE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6458B12974B47D00DBDDE8 /* LaunchScreen.storyboard */; };
 		CE6458BC2974CD4500DBDDE8 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6458BB2974CD4500DBDDE8 /* SliderViewController.swift */; };
+		CEC79ED82975A3C700C6D051 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC79ED72975A3C700C6D051 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE6458A32974B47B00DBDDE8 /* BMICalculator-Marathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMICalculator-Marathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6458A62974B47B00DBDDE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE6458AA2974B47B00DBDDE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE6458AA2974B47B00DBDDE8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE6458AF2974B47D00DBDDE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6458B22974B47D00DBDDE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6458B42974B47D00DBDDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6458BB2974CD4500DBDDE8 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		CEC79ED72975A3C700C6D051 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				CE6458A62974B47B00DBDDE8 /* AppDelegate.swift */,
-				CE6458AA2974B47B00DBDDE8 /* ViewController.swift */,
+				CE6458AA2974B47B00DBDDE8 /* MainViewController.swift */,
+				CEC79ED72975A3C700C6D051 /* ResultViewController.swift */,
 				CE6458BB2974CD4500DBDDE8 /* SliderViewController.swift */,
 				CE6458BA2974C76C00DBDDE8 /* Files */,
 			);
@@ -143,8 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6458BC2974CD4500DBDDE8 /* SliderViewController.swift in Sources */,
-				CE6458AB2974B47B00DBDDE8 /* ViewController.swift in Sources */,
+				CE6458AB2974B47B00DBDDE8 /* MainViewController.swift in Sources */,
 				CE6458A72974B47B00DBDDE8 /* AppDelegate.swift in Sources */,
+				CEC79ED82975A3C700C6D051 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let backgroundImage = UIImageView()
     let titleLabel = UILabel()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
+extension MainViewController {
     func style() {
         // BackgroundImage
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
