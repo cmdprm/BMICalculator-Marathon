@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         style()
         layout()
     }
@@ -97,7 +98,22 @@ extension MainViewController {
 // MARK: - Actions
 extension MainViewController {
     @objc func calculateButtonPressed() {
+        
+        let height = heightView.slider.value / 100
+        let weight = weightView.slider.value
+        
+        let bmi = calculateBMI(height: height, weight: weight)
+        
+        // Transition to result view
         let resultVC = ResultViewController()
+        resultVC.result = bmi
         self.present(resultVC, animated: true)
+    }
+    
+    private func calculateBMI(height: Float, weight: Float) -> Float {
+        let height2 = height * height
+        let bmi = weight / height2
+        
+        return bmi
     }
 }

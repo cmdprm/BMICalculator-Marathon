@@ -16,6 +16,8 @@ class ResultViewController: UIViewController {
     let resultLabel = UILabel()
     let adviceLabel = UILabel()
     
+    var result: Float?
+    
     let recalButton = UIButton(type: .system)
     
     override func viewDidLoad() {
@@ -27,9 +29,6 @@ class ResultViewController: UIViewController {
 
 extension ResultViewController {
     func style() {
-        // View
-        view.backgroundColor = UIColor(named: "BGBlue")
-        
         // BackgroundImage
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.image = UIImage(named: "ResultBackground")
@@ -44,7 +43,7 @@ extension ResultViewController {
         Styles.setupStackLabel(label: textLabel, f_size: 34, f_weight: .heavy, text: "YOUR RESULT")
         
         // ResultLabel
-        Styles.setupStackLabel(label: resultLabel, f_size: 64, f_weight: .bold, text: "19.5")
+        Styles.setupStackLabel(label: resultLabel, f_size: 64, f_weight: .bold, text: String(format: "%.1f", result!))
         
         // AdviceLabel
         Styles.setupStackLabel(label: adviceLabel, f_size: 20, f_weight: .light, text: "EAT SOME MORE SNACKS!")
@@ -52,6 +51,9 @@ extension ResultViewController {
         // RecalButton
         Styles.setupButton(button: recalButton, bgcolor: .white, color: .darkGray, title: "RECALCULATE")
         recalButton.addTarget(self, action: #selector(recalButtonPressed), for: .primaryActionTriggered)
+        
+        // View & Advice
+        setupResults(result: result!)
     }
     
     func layout() {
@@ -93,5 +95,18 @@ extension ResultViewController {
 extension ResultViewController {
     @objc func recalButtonPressed() {
         self.dismiss(animated: true)
+    }
+    
+    private func setupResults(result: Float) {
+        if result < 18.5 {
+            view.backgroundColor = UIColor(named: "BGBlue")
+            adviceLabel.text = "EAT SOME MORE SNACKS!"
+        } else if result <= 25 && result >= 18.5 {
+            view.backgroundColor = UIColor(named: "BGGreen")
+            adviceLabel.text = "YOU'RE OKAY!"
+        } else {
+            view.backgroundColor = UIColor(named: "BGRed")
+            adviceLabel.text = "YOU'RE BAD!"
+        }
     }
 }
