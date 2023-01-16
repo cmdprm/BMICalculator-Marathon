@@ -58,11 +58,9 @@
 		CE6458A52974B47B00DBDDE8 /* BMICalculator-Marathon */ = {
 			isa = PBXGroup;
 			children = (
-				CEC79EDB2975AFC200C6D051 /* Styles.swift */,
 				CE6458A62974B47B00DBDDE8 /* AppDelegate.swift */,
-				CE6458AA2974B47B00DBDDE8 /* MainViewController.swift */,
-				CEC79ED72975A3C700C6D051 /* ResultViewController.swift */,
-				CE6458BB2974CD4500DBDDE8 /* SliderViewController.swift */,
+				CEC79EDF297608C200C6D051 /* View */,
+				CEC79EDD297608B400C6D051 /* Model */,
 				CE6458BA2974C76C00DBDDE8 /* Files */,
 			);
 			path = "BMICalculator-Marathon";
@@ -76,6 +74,24 @@
 				CE6458B42974B47D00DBDDE8 /* Info.plist */,
 			);
 			name = Files;
+			sourceTree = "<group>";
+		};
+		CEC79EDD297608B400C6D051 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEC79EDB2975AFC200C6D051 /* Styles.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEC79EDF297608C200C6D051 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE6458AA2974B47B00DBDDE8 /* MainViewController.swift */,
+				CEC79ED72975A3C700C6D051 /* ResultViewController.swift */,
+				CE6458BB2974CD4500DBDDE8 /* SliderViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
