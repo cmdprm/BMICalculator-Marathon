@@ -46,12 +46,9 @@ extension MainViewController {
         sliderStackView.spacing = 0
         
         // CalculateButton
-        calculateButton.translatesAutoresizingMaskIntoConstraints = false
-        calculateButton.setTitle("CALCULATE", for: [])
-        calculateButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        calculateButton.tintColor = .white
-        calculateButton.backgroundColor = UIColor(named: "MainColor")
-        calculateButton.layer.cornerRadius = 12
+        let mainColor = UIColor(named: "MainColor")!
+        Styles.setupButton(button: calculateButton, bgcolor: mainColor, color: .white, title: "CALCULATE")
+        calculateButton.addTarget(self, action: #selector(calculateButtonPressed), for: .primaryActionTriggered)
     }
     
     func layout() {
@@ -94,5 +91,13 @@ extension MainViewController {
             view.trailingAnchor.constraint(equalTo: calculateButton.trailingAnchor, constant: 20),
             calculateButton.heightAnchor.constraint(equalToConstant: 55),
         ])
+    }
+}
+
+// MARK: - Actions
+extension MainViewController {
+    @objc func calculateButtonPressed() {
+        let resultVC = ResultViewController()
+        self.present(resultVC, animated: true)
     }
 }

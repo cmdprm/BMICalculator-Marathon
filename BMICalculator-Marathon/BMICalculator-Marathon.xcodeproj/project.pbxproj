@@ -13,6 +13,7 @@
 		CE6458B32974B47D00DBDDE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6458B12974B47D00DBDDE8 /* LaunchScreen.storyboard */; };
 		CE6458BC2974CD4500DBDDE8 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6458BB2974CD4500DBDDE8 /* SliderViewController.swift */; };
 		CEC79ED82975A3C700C6D051 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC79ED72975A3C700C6D051 /* ResultViewController.swift */; };
+		CEC79EDC2975AFC200C6D051 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC79EDB2975AFC200C6D051 /* Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE6458B42974B47D00DBDDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6458BB2974CD4500DBDDE8 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		CEC79ED72975A3C700C6D051 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CEC79EDB2975AFC200C6D051 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		CE6458A52974B47B00DBDDE8 /* BMICalculator-Marathon */ = {
 			isa = PBXGroup;
 			children = (
+				CEC79EDB2975AFC200C6D051 /* Styles.swift */,
 				CE6458A62974B47B00DBDDE8 /* AppDelegate.swift */,
 				CE6458AA2974B47B00DBDDE8 /* MainViewController.swift */,
 				CEC79ED72975A3C700C6D051 /* ResultViewController.swift */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6458BC2974CD4500DBDDE8 /* SliderViewController.swift in Sources */,
+				CEC79EDC2975AFC200C6D051 /* Styles.swift in Sources */,
 				CE6458AB2974B47B00DBDDE8 /* MainViewController.swift in Sources */,
 				CE6458A72974B47B00DBDDE8 /* AppDelegate.swift in Sources */,
 				CEC79ED82975A3C700C6D051 /* ResultViewController.swift in Sources */,
