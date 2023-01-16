@@ -12,15 +12,12 @@ class ViewController: UIViewController {
     let backgroundImage = UIImageView()
     let titleLabel = UILabel()
     
-    let heightStackView = UIStackView()
-    let heightLabelsStackView = UIStackView()
-    let heightLabel = UILabel()
-    let heightNumberLabel = UILabel()
-    let heightSlider = UISlider()
+    let sliderStackView = UIStackView()
     
-    let weightStackView = UIStackView()
+    let heightView = SliderViewController(frame: .zero, label: "Height", maximum: 300, mesuare: "cm")
+    let weightView = SliderViewController(frame: .zero, label: "Weight", maximum: 150, mesuare: "kg")
     
-    let testView = SliderViewController()
+    let calculateButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,24 +40,28 @@ extension ViewController {
         titleLabel.numberOfLines = 0
         titleLabel.textColor = .darkGray
         
-        // HeightStackView
-        heightStackView.translatesAutoresizingMaskIntoConstraints = false
-        heightStackView.axis = .vertical
-        heightStackView.spacing = 8
+        // SlidersStackView
+        sliderStackView.translatesAutoresizingMaskIntoConstraints = false
+        sliderStackView.axis = .vertical
+        sliderStackView.spacing = 0
         
-        // HeightLabelsStackView
-        heightLabelsStackView.translatesAutoresizingMaskIntoConstraints = false
-        heightLabelsStackView.axis = .horizontal
-        heightLabelsStackView.distribution = .fill
-        
-        // HeightLabel
-        //testView.backgroundColor = .red
+        // CalculateButton
+        calculateButton.translatesAutoresizingMaskIntoConstraints = false
+        calculateButton.setTitle("CALCULATE", for: [])
+        calculateButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        calculateButton.tintColor = .white
+        calculateButton.backgroundColor = UIColor(named: "MainColor")
+        calculateButton.layer.cornerRadius = 12
     }
     
     func layout() {
+        sliderStackView.addArrangedSubview(heightView)
+        sliderStackView.addArrangedSubview(weightView)
+        
         view.addSubview(backgroundImage)
         view.addSubview(titleLabel)
-        view.addSubview(testView)
+        view.addSubview(sliderStackView)
+        view.addSubview(calculateButton)
         
         let safeArea = view.safeAreaLayoutGuide
         
@@ -79,10 +80,19 @@ extension ViewController {
             safeArea.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 80)
         ])
         
-        // TestView
+        // SlidersStackView
         NSLayoutConstraint.activate([
-            testView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            testView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            sliderStackView.bottomAnchor.constraint(equalTo: calculateButton.topAnchor, constant: -20),
+            sliderStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            view.trailingAnchor.constraint(equalTo: sliderStackView.trailingAnchor, constant: 10),
+        ])
+        
+        // CalculateButton
+        NSLayoutConstraint.activate([
+            calculateButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -40),
+            calculateButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            view.trailingAnchor.constraint(equalTo: calculateButton.trailingAnchor, constant: 20),
+            calculateButton.heightAnchor.constraint(equalToConstant: 55),
         ])
     }
 }
